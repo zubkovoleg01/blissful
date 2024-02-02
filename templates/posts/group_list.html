@@ -8,7 +8,7 @@
     {% for post in posts %}
       <article>
         <ul>
-          <li>Автор: {{ post.author.username }}</li>
+          <li>Автор: <a href="{% url 'posts:profile' post.author %}">{{ post.author.username }}</a></li>
           <li>Дата публикации: {{ post.pub_date }}</li>
         </ul>
         <p>{{ post.text }}</p>
